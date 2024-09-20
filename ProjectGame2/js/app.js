@@ -31,7 +31,6 @@ button0.addEventListener("click", function () {
   selectRandomButtonForPlayer();
   selectRandomButtonForAi();
   compareResults();
-  showText();
   showAllResult()
 
 });
