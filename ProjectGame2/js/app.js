@@ -73,13 +73,12 @@ function compareResults() {
     drawScore++;
     showText("Draw ");
   } else {
-    aiScore++;
-    showText("AI wins this round!");
+  aiScore++;
+  showText("AI wins this round!");
   }
 }
 
 //View
-
 function showText(result) {
   resultText.innerHTML = result;
 }
