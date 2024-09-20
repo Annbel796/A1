@@ -1,6 +1,12 @@
-//  Variables
+// Variables
 // Buttons
+let PlayersButton1 = document.getElementById("PlayersButton1");
+let PlayersButton2 = document.getElementById("PlayersButton2");
+let PlayersButton3 = document.getElementById("PlayersButton3");
 let button0 = document.getElementById("button0");
+let aiButton1 = document.getElementById("aiButton1");
+let aiButton2 = document.getElementById("aiButton2");
+let aiButton3 = document.getElementById("aiButton3");
 
 //Text
 const textField0 = document.getElementById("text0");
