@@ -1,12 +1,12 @@
 //  Variables
 // Buttons
-let playersRockBtn = document.getElementById("playersRockBtn");
-let playersPaperBtn = document.getElementById("playersPaperBtn");
-let playersScissorsBtn = document.getElementById("playersScissorsBtn");
+let playersRock = document.getElementById("playersRock");
+let playersPaper = document.getElementById("playersPaper");
+let playersScissors = document.getElementById("playersScissors");
 let button0 = document.getElementById("button0");
-let aiRockBtn = document.getElementById("aiRockBtn");
-let aiPaperBtn = document.getElementById("aiPaperBtn");
-let aiScissorsBtn = document.getElementById("aiScissorsBtn");
+let aiRock = document.getElementById("aiRock");
+let aiPaper = document.getElementById("aiPaper");
+let aiScissors = document.getElementById("aiScissors");
 
 //Text
 const textField0 = document.getElementById("text0");
@@ -16,8 +16,8 @@ let totalScoreText = document.getElementById("totalScoreText");
 
 
 //Data
-let buttons1 = [playersRockBtn, playersPaperBtn, playersScissorsBtn];
-let buttons2 = [aiRockBtn, aiPaperBtn, aiScissorsBtn];
+let buttons1 = [playersRock, playersPaper, playersScissors];
+let buttons2 = [aiRock, aiPaper, aiScissors];
 let playerChoice = "";
 let aiChoice = "";
 let playerScore = 0;
@@ -45,9 +45,9 @@ function selectRandomButtonForPlayer() {
 }
 
 function resetButtonColorsForPlayer() {
-  playersRockBtn.style.color = "";
-  playersPaperBtn.style.color = "";
-  playersScissorsBtn.style.color = "";
+  playersRock.style.color = "";
+  playersPaper.style.color = "";
+  playersScissors.style.color = "";
 }
 
 function selectRandomButtonForAi() {
@@ -58,15 +58,15 @@ function selectRandomButtonForAi() {
 }
 
 function resetButtonColorsForAi() {
-  aiRockBtn.style.color = "";
-  aiPaperBtn.style.color = "";
-  aiScissorsBtn.style.color = "";
+  aiRock.style.color = "";
+  aiPaper.style.color = "";
+  aiScissors.style.color = "";
 }
 
 function compareResults() {
   if ((playerChoice === "rock" && aiChoice === "scissors") ||
      (playerChoice === "scissors" && aiChoice === "paper") ||
-     (playerChoice === "paper" && aiChoice === "rock")){
+     (playerChoice === "paper" && aiChoice === "rock")) {
     playerScore++;
     showText("Player wins this round!");
   } else if (playerChoice === aiChoice){
