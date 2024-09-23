@@ -86,5 +86,6 @@ function showAllResult(){
   totalScoreText.innerHTML = "Total score: Player - " + playerScore + "; AI - " + aiScore + "; Draw - " + drawScore;
 }
 
+// Style
 textField0.style.color = "blue";
 button0.style.color = "blue";
