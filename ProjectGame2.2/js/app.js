@@ -124,5 +124,6 @@ function showAiAllResult() {
   let aiWinsNumber = aiScoreHistory.filter(score => score === 1).length;
   aiHistoryText.innerHTML = "AI wins " + aiWinsNumber + " times" + "of " + totalGames + " games";
 }
+
 // Style
 textField0.style.color = "blue";
