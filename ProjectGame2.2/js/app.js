@@ -12,6 +12,8 @@ const textField0 = document.getElementById("text0");
 const textField1 = document.getElementById("text1");
 let resultText = document.getElementById("result");
 let totalScoreText = document.getElementById("totalScoreText");
+let playerHistoryText = document.getElementById("playerHistory");
+let aiHistoryText = document.getElementById("aiHistory");
 
 
 //Data
@@ -22,27 +24,35 @@ let aiChoice = "";
 let playerScore = 0;
 let aiScore = 0;
 let drawScore = 0;
+let playerScoreHistory = [];
+let aiScoreHistory = [];
 
 //Process
 playersRock.addEventListener("click", function () {
   selectButtonForPlayer(playersRock);
   selectRandomButtonForAi();
   compareResults();
-  showAllResult()
-
+  showAllResult();
+  showPlayerAllResult();
+  showAiAllResult();
 });
+
 playersPaper.addEventListener("click", function () {
   selectButtonForPlayer(playersPaper);
   selectRandomButtonForAi();
   compareResults();
-  showAllResult()
-
+  showAllResult();
+  showPlayerAllResult();
+  showAiAllResult();
 });
+
 playersScissors.addEventListener("click", function () {
   selectButtonForPlayer(playersScissors);
   selectRandomButtonForAi();
   compareResults();
-  showAllResult()
+  showAllResult();
+  showPlayerAllResult();
+  showAiAllResult();
 });
 
 // Controllers
@@ -78,12 +88,18 @@ function compareResults() {
      (playerChoice === "scissors" && aiChoice === "paper") ||
      (playerChoice === "paper" && aiChoice === "rock")) {
     playerScore++;
+    playerScoreHistory.push(1);
+    aiScoreHistory.push(0);
     showText("Player wins this round!");
   } else if (playerChoice === aiChoice){
     drawScore++;
+    playerScoreHistory.push(0);
+    aiScoreHistory.push(0);
     showText("Draw ");
   } else {
-  aiScore++;
+    aiScore++;
+    playerScoreHistory.push(0);
+    aiScoreHistory.push(1);
   showText("AI wins this round!");
   }
 }
@@ -97,5 +113,16 @@ function showAllResult(){
   totalScoreText.innerHTML = "Total score: Player - " + playerScore + "; AI - " + aiScore + "; Draw - " + drawScore;
 }
 
+function showPlayerAllResult() {
+  let totalGames = playerScore + aiScore + drawScore;
+  let playerWinsNumber = playerScoreHistory.filter(score => score === 1).length;
+  playerHistoryText.innerHTML = "Player wins " + playerWinsNumber + " times " + "of " + totalGames + " games";
+}
+
+function showAiAllResult() {
+  let totalGames = playerScore + aiScore + drawScore;
+  let aiWinsNumber = aiScoreHistory.filter(score => score === 1).length;
+  aiHistoryText.innerHTML = "AI wins " + aiWinsNumber + " times" + "of " + totalGames + " games";
+}
 // Style
 textField0.style.color = "blue";
