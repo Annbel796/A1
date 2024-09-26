@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7e9e189-1c7c-4192-8c39-1d6c84197275" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/img/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/js/vendor/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/site.webmanifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/webpack.config.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ProjectGame2.2/webpack.config.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +31,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "disable.download.node.interpreter.editor.notification": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Projects/A1/ProjectGame",
+    "last_opened_file_path": "C:/Projects/A1/ProjectGame2.2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,6 +63,8 @@
       <workItem from="1726748679397" duration="22327000" />
       <workItem from="1727081543587" duration="3764000" />
       <workItem from="1727096076790" duration="5000000" />
+      <workItem from="1727184466613" duration="2279000" />
+      <workItem from="1727335645880" duration="3407000" />
     </task>
     <servers />
   </component>
