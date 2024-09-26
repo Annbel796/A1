@@ -4,7 +4,6 @@ let button0 = document.getElementById("button0");
 
   //Text
 const textField0 = document.getElementById("text0");
-const textField1 = document.getElementById("text1");
 let playerRollText = document.getElementById("playerRollText");
 let aiRollText = document.getElementById("aiRollText");
 let resultText = document.getElementById("result");
@@ -32,8 +31,9 @@ button0.addEventListener("click", function () {
   getRandomNumberOneToSixForAi();
   showAiRollResult();
   compareRolls();
-  showPlayerAllResult();
-  showAiAllResult();
+  showAllResult();
+  // showPlayerAllResult();
+  // showAiAllResult();
   saveScore();
 
 });
@@ -91,7 +91,7 @@ function getCookie(cname) {
       return c.substring(name.length, c.length);
     }
   }
-  //return "";
+
   return 0;
 }
 
