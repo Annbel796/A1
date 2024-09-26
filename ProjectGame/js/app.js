@@ -23,16 +23,19 @@ let aiScoreHistory = [];
 
 
 //Process
+tryLoadGame();
+showAllResult();
+
 button0.addEventListener("click", function () {
   getRandomNumberOneToSixForPlayer();
   showPlayerRollResult();
   getRandomNumberOneToSixForAi();
   showAiRollResult();
   compareRolls();
-  showAllResult();
   showPlayerAllResult();
   showAiAllResult();
   saveScore();
+
 });
 
 // Controllers
@@ -64,16 +67,22 @@ function compareRolls() {
 }
 
 //Cookies
-function saveScore (){
+function saveScore(){
 document.cookie = "playerScore=" + playerScore + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
-  document.cookie = "aiScore=" + aiScore + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
+document.cookie = "aiScore=" + aiScore + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
+}
+
+function tryLoadGame(){
+  playerScore = getCookie("playerScore");
+  aiScore = getCookie("aiScore");
+  //showScore();
 }
 
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
+  for (let i = 0; i <ca.length; i++) {
     let c = ca[i];
     while (c.charAt(0) === ' ') {
       c = c.substring(1);
@@ -82,7 +91,8 @@ function getCookie(cname) {
       return c.substring(name.length, c.length);
     }
   }
-  return "";
+  //return "";
+  return 0;
 }
 
 
