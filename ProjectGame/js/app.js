@@ -32,7 +32,7 @@ button0.addEventListener("click", function () {
   showAiRollResult();
   compareRolls();
   showAllResult();
-  // showPlayerAllResult();
+  showPlayerAllResult();
   // showAiAllResult();
   saveScore();
 
@@ -68,14 +68,13 @@ function compareRolls() {
 
 //Cookies
 function saveScore(){
-document.cookie = "playerScore=" + playerScore + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
-document.cookie = "aiScore=" + aiScore + ";expires=Thu, 18 Dec 2025 12:00:00 UTC";
+document.cookie = "playerScore=" + playerScore + ";expires=Thu, 18 Dec 2027 12:00:00 UTC";
+document.cookie = "aiScore=" + aiScore + ";expires=Thu, 18 Dec 2027 12:00:00 UTC";
 }
 
 function tryLoadGame(){
   playerScore = getCookie("playerScore");
   aiScore = getCookie("aiScore");
-  //showScore();
 }
 
 function getCookie(cname) {
@@ -115,17 +114,31 @@ function showAllResult(){
 
 function showPlayerAllResult() {
   let totalGames = playerScore + aiScore + drawScore;
-  let playerWinsNumber = playerScoreHistory.filter(score => score === 1).length;
-  playerHistoryText.innerHTML = "Player wins " + playerWinsNumber + " times " + "of " + totalGames + " games";
+  let playerWinsNumber = 0;
+  for (let i = 0; i < playerScoreHistory.length; i++) {
+    if (playerScoreHistory[i] === 1) {
+      playerWinsNumber++;
+    }
+  }
+  playerHistoryText.innerHTML = "Player wins " + playerWinsNumber + " times of " + totalGames + " games";
  }
 
-function showAiAllResult() {
-  let totalGames = playerScore + aiScore + drawScore;
-  let aiWinsNumber = aiScoreHistory.filter(score => score === 1).length;
-  aiHistoryText.innerHTML = "AI wins " + aiWinsNumber + " times" + "of " + totalGames + " games";
-}
+
 
 // Style
 textField0.style.color = "red";
 button0.style.color = "red";
 
+
+
+
+
+
+
+
+
+//function showAiAllResult() {
+//   let totalGames = playerScore + aiScore + drawScore;
+//   let aiWinsNumber = aiScoreHistory.filter(score => score === 1).length;
+//   aiHistoryText.innerHTML = "AI wins " + aiWinsNumber + " times" + "of " + totalGames + " games";
+// }
