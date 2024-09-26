@@ -33,7 +33,7 @@ button0.addEventListener("click", function () {
   compareRolls();
   showAllResult();
   showPlayerAllResult();
-  // showAiAllResult();
+  showAiAllResult();
   saveScore();
 
 });
@@ -113,17 +113,24 @@ function showAllResult(){
 }
 
 function showPlayerAllResult() {
-  let totalGames = playerScore + aiScore + drawScore;
   let playerWinsNumber = 0;
   for (let i = 0; i < playerScoreHistory.length; i++) {
     if (playerScoreHistory[i] === 1) {
       playerWinsNumber++;
     }
   }
-  playerHistoryText.innerHTML = "Player wins " + playerWinsNumber + " times of " + totalGames + " games";
- }
+  playerHistoryText.innerHTML = "Player wins " + playerWinsNumber;
+}
 
-
+function showAiAllResult() {
+  let aiWinsNumber = 0;
+  for (let i = 0; i < aiScoreHistory.length; i++) {
+    if (aiScoreHistory[i] === 1) {
+      aiWinsNumber++;
+    }
+  }
+  aiHistoryText.innerHTML = "AI wins " + aiWinsNumber;
+}
 
 // Style
 textField0.style.color = "red";
@@ -142,3 +149,7 @@ button0.style.color = "red";
 //   let aiWinsNumber = aiScoreHistory.filter(score => score === 1).length;
 //   aiHistoryText.innerHTML = "AI wins " + aiWinsNumber + " times" + "of " + totalGames + " games";
 // }
+
+
+// let totalGames = playerScore + aiScore + drawScore;
+//playerHistoryText.innerHTML = "Player wins " + playerWinsNumber + " times of " + totalGames + " games";
