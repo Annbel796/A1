@@ -133,14 +133,13 @@ function getCookie(cname) {
   return 0;
 }
 
-
 //View
 function showText(result) {
   resultText.innerHTML = result;
 }
 
 function showAllResult(){
-  totalScoreText.innerHTML = "Total score: Player - " + playerScore + "; AI - " + aiScore + "; Draw - " + drawScore;
+  totalScoreText.innerHTML = "Total score: Player - " + playerScore + "; AI - " + aiScore;
 }
 
 function showPlayerAllResult() {
