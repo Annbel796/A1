@@ -9,7 +9,6 @@ let aiScissors = document.getElementById("aiScissors");
 
 //Text
 const textField0 = document.getElementById("text0");
-const textField1 = document.getElementById("text1");
 let resultText = document.getElementById("result");
 let totalScoreText = document.getElementById("totalScoreText");
 let playerHistoryText = document.getElementById("playerHistory");
@@ -28,31 +27,34 @@ let playerScoreHistory = [];
 let aiScoreHistory = [];
 
 //Process
+tryLoadGame();
+showAllResult();
+
 playersRock.addEventListener("click", function () {
   selectButtonForPlayer(playersRock);
   selectRandomButtonForAi();
   compareResults();
-  showAllResult();
   showPlayerAllResult();
   showAiAllResult();
+  saveScore();
 });
 
 playersPaper.addEventListener("click", function () {
   selectButtonForPlayer(playersPaper);
   selectRandomButtonForAi();
   compareResults();
-  showAllResult();
   showPlayerAllResult();
   showAiAllResult();
+  saveScore();
 });
 
 playersScissors.addEventListener("click", function () {
   selectButtonForPlayer(playersScissors);
   selectRandomButtonForAi();
   compareResults();
-  showAllResult();
   showPlayerAllResult();
   showAiAllResult();
+  saveScore();
 });
 
 // Controllers
@@ -103,6 +105,34 @@ function compareResults() {
   showText("AI wins this round!");
   }
 }
+// Cookies
+function saveScore(){
+  document.cookie = "playerScore=" + playerScore + ";expires=Thu, 18 Dec 2027 12:00:00 UTC";
+  document.cookie = "aiScore=" + aiScore + ";expires=Thu, 18 Dec 2027 12:00:00 UTC";
+}
+
+function tryLoadGame(){
+  playerScore = getCookie("playerScore");
+  aiScore = getCookie("aiScore");
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for (let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+
+  return 0;
+}
+
 
 //View
 function showText(result) {
@@ -114,15 +144,23 @@ function showAllResult(){
 }
 
 function showPlayerAllResult() {
-  let totalGames = playerScore + aiScore + drawScore;
-  let playerWinsNumber = playerScoreHistory.filter(score => score === 1).length;
-  playerHistoryText.innerHTML = "Player wins " + playerWinsNumber + " times " + "of " + totalGames + " games";
+  let playerWinsNumber = 0;
+  for (let i = 0; i < playerScoreHistory.length; i++) {
+    if (playerScoreHistory[i] === 1) {
+      playerWinsNumber++;
+    }
+  }
+  playerHistoryText.innerHTML = "Player wins " + playerWinsNumber;
 }
 
 function showAiAllResult() {
-  let totalGames = playerScore + aiScore + drawScore;
-  let aiWinsNumber = aiScoreHistory.filter(score => score === 1).length;
-  aiHistoryText.innerHTML = "AI wins " + aiWinsNumber + " times" + "of " + totalGames + " games";
+  let aiWinsNumber = 0;
+  for (let i = 0; i < aiScoreHistory.length; i++) {
+    if (aiScoreHistory[i] === 1) {
+      aiWinsNumber++;
+    }
+  }
+  aiHistoryText.innerHTML = "AI wins " + aiWinsNumber;
 }
 
 // Style

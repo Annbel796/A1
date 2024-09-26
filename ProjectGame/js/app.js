@@ -142,14 +142,5 @@ button0.style.color = "red";
 
 
 
-
-
-//function showAiAllResult() {
-//   let totalGames = playerScore + aiScore + drawScore;
-//   let aiWinsNumber = aiScoreHistory.filter(score => score === 1).length;
-//   aiHistoryText.innerHTML = "AI wins " + aiWinsNumber + " times" + "of " + totalGames + " games";
-// }
-
-
 // let totalGames = playerScore + aiScore + drawScore;
 //playerHistoryText.innerHTML = "Player wins " + playerWinsNumber + " times of " + totalGames + " games";
