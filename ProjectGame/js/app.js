@@ -2,7 +2,7 @@
   // Buttons
 let button0 = document.getElementById("button0");
 
-  //Text
+  // Text
 const textField0 = document.getElementById("text0");
 let playerRollText = document.getElementById("playerRollText");
 let aiRollText = document.getElementById("aiRollText");
@@ -11,7 +11,7 @@ let totalScoreText = document.getElementById("totalScoreText");
 let playerHistoryText = document.getElementById("playerHistory");
 let aiHistoryText = document.getElementById("aiHistory");
 
-  //Data
+  // Data
 let playerRoll = 0;
 let aiRoll = 0;
 let playerScore = 0;
@@ -21,7 +21,7 @@ let playerScoreHistory = [];
 let aiScoreHistory = [];
 
 
-//Process
+// Process
 tryLoadGame();
 showAllResult();
 
@@ -66,7 +66,7 @@ function compareRolls() {
   }
 }
 
-//Cookies
+// Cookies
 function saveScore(){
 document.cookie = "playerScore=" + playerScore + ";expires=Thu, 18 Dec 2027 12:00:00 UTC";
 document.cookie = "aiScore=" + aiScore + ";expires=Thu, 18 Dec 2027 12:00:00 UTC";
