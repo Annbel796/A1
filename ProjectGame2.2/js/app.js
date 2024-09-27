@@ -13,7 +13,7 @@ let resultText = document.getElementById("result");
 let totalScoreText = document.getElementById("totalScoreText");
 let playerHistoryText = document.getElementById("playerHistory");
 let aiHistoryText = document.getElementById("aiHistory");
-
+let DrawText = document.getElementById("Draw");
 
 //Data
 let buttons1 = [playersRock, playersPaper, playersScissors];
@@ -37,6 +37,7 @@ playersRock.addEventListener("click", function () {
   showPlayerAllResult();
   showAiAllResult();
   saveScore();
+  showDraw();
 });
 
 playersPaper.addEventListener("click", function () {
@@ -46,6 +47,7 @@ playersPaper.addEventListener("click", function () {
   showPlayerAllResult();
   showAiAllResult();
   saveScore();
+  showDraw();
 });
 
 playersScissors.addEventListener("click", function () {
@@ -55,6 +57,7 @@ playersScissors.addEventListener("click", function () {
   showPlayerAllResult();
   showAiAllResult();
   saveScore();
+  showDraw();
 });
 
 // Controllers
@@ -160,6 +163,10 @@ function showAiAllResult() {
     }
   }
   aiHistoryText.innerHTML = "AI wins " + aiWinsNumber;
+}
+
+function showDraw(){
+  DrawText.innerHTML = "Draw " + drawScore;
 }
 
 // Style
