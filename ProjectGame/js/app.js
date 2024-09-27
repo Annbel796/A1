@@ -136,11 +136,3 @@ function showAiAllResult() {
 textField0.style.color = "red";
 button0.style.color = "red";
 
-
-
-
-
-
-
-// let totalGames = playerScore + aiScore + drawScore;
-//playerHistoryText.innerHTML = "Player wins " + playerWinsNumber + " times of " + totalGames + " games";
