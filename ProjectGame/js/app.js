@@ -109,7 +109,7 @@ function showText(result) {
 }
 
 function showAllResult(){
-  totalScoreText.innerHTML = "Total score: Player - " + playerScore + "; AI - " + aiScore + "; Draw - " + drawScore;
+  totalScoreText.innerHTML = "Total score: Player - " + playerScore + "; AI - " + aiScore;
 }
 
 function showPlayerAllResult() {
