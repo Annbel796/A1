@@ -135,4 +135,5 @@ function showAiAllResult() {
 // Style
 textField0.style.color = "red";
 button0.style.color = "red";
-
+document.body.style.textAlign = "center";
+document.body.style.fontSize = "20px";

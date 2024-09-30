@@ -171,3 +171,5 @@ function showDraw(){
 
 // Style
 textField0.style.color = "blue";
+document.body.style.textAlign = "center";
+document.body.style.fontSize = "20px";
